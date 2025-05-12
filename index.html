@@ -1,529 +1,445 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-  <head>
-    <meta charset="utf8" />
-    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    <title>
-      
-        StudyingBlog
-      
-    </title>
-    <meta name="description" content="博客会分享一些数学、物理、CS相关的知识，主要是记录自己的学习历程，分享学习心得" />
-    <meta name="keywords" content="" />
-    
-      <link rel="apple-touch-icon"
-            sizes="180x180"
-            href="/project/images/apple-touch-icon.png" />
-    
-    
-      <link rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/project/images/favicon-32x32.png" />
-    
-    
-      <link rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/project/images/favicon-16x16.png" />
-    
-    
-      <link rel="mask-icon"
-            href="/project/images/logo.svg"
-            color="" />
-    
-    
-    
-      
-  <style>
-    @font-face {
-        font-family:sourceHanSerif;
-        src: url(/project/font/normal.ttf);
-        font-weight: normal;
-    }
-  </style>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/project/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/project/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/project/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/project/images/logo.svg" color="#222">
 
-  <style>
-    @font-face {
-        font-family:sourceHanSerif;
-        src: url(/project/font/bold.ttf);
-        font-weight: bold;
-    }
-  </style>
+<link rel="stylesheet" href="/project/css/main.css">
 
 
-    
-    <link rel="stylesheet"
-          type="text/css"
-          href='/project/css/layout.css' />
-    
-    
-  
-  <link rel="stylesheet"
-        type="text/css"
-        href='/project/css/index.css'/>
+<link rel="stylesheet" href="/project/lib/font-awesome/css/all.min.css">
 
-  <meta name="generator" content="Hexo 7.3.0"></head>
-  <body>
-    
-      <div id="search-mask" style="display:none">
-  <div class="search-main" id="search-main">
-    <div class="search__head">
-      <div class="search-form">
-        <svg t="1706347533072"
-             class="icon"
-             viewBox="0 0 1024 1024"
-             version="1.1"
-             xmlns="http://www.w3.org/2000/svg"
-             p-id="7828"
-             width="20"
-             height="20">
-          <path d="M685.6 660.336l155.152 155.168a16 16 0 0 1 0 22.624l-11.312 11.328a16 16 0 0 1-22.624 0l-158.528-158.544a289.792 289.792 0 0 1-165.152 51.36C322.336 742.256 192 611.904 192 451.12 192 290.336 322.336 160 483.136 160c160.784 0 291.12 130.336 291.12 291.136 0 82.112-33.984 156.272-88.672 209.2z m-202.464 33.92c134.272 0 243.12-108.848 243.12-243.12C726.256 316.848 617.408 208 483.136 208 348.848 208 240 316.848 240 451.136c0 134.272 108.848 243.12 243.136 243.12z" fill="#000000" p-id="7829">
-          </path>
-        </svg>
-        <input id="search-input" placeholder="搜索文章">
-        <svg t="1706361500528"
-             id="search-clear"
-             class="icon"
-             viewBox="0 0 1024 1024"
-             version="1.1"
-             xmlns="http://www.w3.org/2000/svg"
-             p-id="4351"
-             width="20"
-             height="20">
-          <path d="M512 562.688l-264.2944 264.2944-50.688-50.688L461.312 512 197.0176 247.7056l50.688-50.688L512 461.312l264.2944-264.2944 50.688 50.688L562.688 512l264.2944 264.2944-50.688 50.688L512 562.688z" fill="#00" p-id="4352">
-          </path>
-        </svg>
-      </div>
-    </div>
-    <div class="search__body" id="search-result"></div>
-    <div class="search__foot"></div>
-  </div>
-</div>
-
-    
-    
-    <div class=head>
-      <div class="nav">
-        <a href='/project/' class="nav-logo">
-          <img alt="logo" height="60px" width="60px" src="/project/images/logo.svg" />
-        </a>
-        <input id="navBtn" type="checkbox" />
-        <div class="nav-right">
-          
-            <div class="search-outer">
-  <div class="search" id="search-btn">
-    <svg t="1706347533072"
-         class="icon"
-         viewBox="0 0 1024 1024"
-         version="1.1"
-         xmlns="http://www.w3.org/2000/svg"
-         p-id="7828"
-         width="20"
-         height="20">
-      <path d="M685.6 660.336l155.152 155.168a16 16 0 0 1 0 22.624l-11.312 11.328a16 16 0 0 1-22.624 0l-158.528-158.544a289.792 289.792 0 0 1-165.152 51.36C322.336 742.256 192 611.904 192 451.12 192 290.336 322.336 160 483.136 160c160.784 0 291.12 130.336 291.12 291.136 0 82.112-33.984 156.272-88.672 209.2z m-202.464 33.92c134.272 0 243.12-108.848 243.12-243.12C726.256 316.848 617.408 208 483.136 208 348.848 208 240 316.848 240 451.136c0 134.272 108.848 243.12 243.136 243.12z" fill="#000000" p-id="7829">
-      </path>
-    </svg>
-    <span>搜索</span>
-    <span class="search-shortcut-key">Ctrl K</span>
-  </div>
-</div>
-
-          
-          <div class="nav-menu">
-            
-              
-                <a class="nav-menu-item" href="/project/feat">特性测试</a>
-              
-                <a class="nav-menu-item" href="/project/base">基础测试</a>
-              
-                <a class="nav-menu-item" href="/project/name">全部文章</a>
-              
-            
-            <a class="nav-menu-item" href='/project/cv/'>简历</a>
-          </div>
-        </div>
-        <label class="nav-btn" for="navBtn"></label>
-      </div>
-    </div>
-    <div class="body">
-      
-  <div class="wall wall-index">
-    <div class="wall-main" id="wall-main">
-      <div class="wall-title">STUDYINGBLOG</div>
-      <div class="wall-subtitle">这里是Bamboo-W的学习博客</div>
-      <div class="wall-description">“让选择正确”</div>
-    </div>
-    <div class="wall-bg">
-      <div class="wall-bg-index">
-        <div class="hello-world">
-          <div>> Hello world</div>
-          <div class="cursor"></div>
-        </div>
-        <div class="normal-eqt">
-          <img alt="normal" width="300px" height="" src="/project/images/normal.svg"/>
-        </div>
-        <canvas width="400" height="400" id="heart-curve"></canvas>
-        <div class="motto">Math</div>
-        <div class="poem">
-          
-            这首诗在哪里？
-            <br/>
-          
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="about">
-    <div class="about-photo"
-         style="background-image: url(/project/null)"></div>
-    <div class="about-text">
-      <div class="about-title">
-        
-          <div class="matts">关</div>
-        
-          <div class="matts">于</div>
-        
-      </div>
-      <div class="about-detail">
-        <div class="about-text-p">
-          
-        </div>
-      </div>
-    </div>
-  </div>
-  
-    <div class="timeline">
-      <div class="timeline-head">
-        <div class="title">时间线</div>
-        <div class="radio-wrapper">
-          
-            <div class="radio">
-              <input id="radio-article"
-                     type="checkbox"
-                     />
-              <label class="radio-skin--article" for="radio-article"></label>
-            </div>
-          
-            <div class="radio">
-              <input id="radio-app"
-                     type="checkbox"
-                     checked/>
-              <label class="radio-skin--app" for="radio-app"></label>
-            </div>
-          
-            <div class="radio">
-              <input id="radio-event"
-                     type="checkbox"
-                     />
-              <label class="radio-skin--event" for="radio-event"></label>
-            </div>
-          
-        </div>
-      </div>
-      <div class="timeline-body">
-        <div class="timeline-item-first">
-          <div class="line-anchor line-anchor--now"></div>
-        </div>
-        <div class="timeline-list" id="timeline-list"></div>
-        <div class="timeline-item-last">
-          <div class="line-anchor line-anchor--end"></div>
-        </div>
-      </div>
-    </div>
-  
-
-    </div>
-    <div class="foot">
-  <div class="foot-inner">
-    <div class="foot__head">
-      
-        <div class="foot-line">
-          <div class="matts">这</div><div class="matts">里</div><div class="matts">要</div><div class="matts">写</div><div class="matts">一</div><div class="matts">句</div><div class="matts">非</div><div class="matts">常</div><div class="matts">励</div><div class="matts">志</div><div class="matts">的</div><div class="matts">名</div><div class="matts">言</div><div class="matts">！</div>
-        </div>
-      
-    </div>
-    <div class="foot__body">
-      
-      
-        <div class="foot-item">
-          <div class="foot-item__head">账号</div>
-          <div class="foot-item__body">
-            
-
-
-  
-  
-    <div class="foot-link-group">
-      
-        
-        
-          <div class="text">
-            <img alt="link"
-                 height="20px"
-                 width="20px"
-                 src="/project/images/logo-github.svg" />
-            <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/Bamboo-W">Bamboo-W</a>
-          </div>
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-    </div>
-  
-
-
-          </div>
-        </div>
-      
-      <div class="foot-item">
-        <div class="foot-item__head">联系</div>
-        <div class="foot-item__body">
-          
-
-
-  
-  
-    <div class="foot-link-group">
-      
-        
-        
-          <div class="text">
-            <img alt="link"
-                 height="20px"
-                 width="20px"
-                 src="/project/images/icon/icon-email.svg" />
-            <a class="foot-link" href="mailto:2970738462@qq.com">2970738462@qq.com</a>
-          </div>
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-      
-    </div>
-  
-
-
-        </div>
-      </div>
-    </div>
-    <div class="copyright">
-      <a href="https://bamboo-w.github.io/project">StudyingBlog</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
-      <svg width="20" height="20" viewBox="0 0 725 725">
-        <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z" />
-        <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z" />
-        <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z" />
-      </svg>
-      <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
-    </div>
-  </div>
-</div>
-
-    
-    
-      <script src="/project/js/search.js"></script>
-      <script>searchInitialize("/project/search.json")</script>
-    
-    <script src="/project/js/copy-code.js"></script>
-    
-  <script type="text/javascript">
-  function HeartCurve(w, h) {
-    this.w = w;
-    this.h = h;
-    this.a = undefined;
-    this.ctx = undefined;
-    this.deg = 0;
-    this.speed = 0.4;
-    this.isPause = false;
-    this.init();
-  }
-  HeartCurve.prototype.init = function () {
-    const {
-      w,
-      h
-    } = this;
-    const canvas = document.querySelector('#heart-curve');
-    if (!canvas) throw Error('no canvas element!');
-
-    this.ctx = canvas.getContext('2d');
-    this.ctx.translate(2 * w / 3, h / 2);
-    this.ctx.lineJoin = 'round';
-    this.a = w / 6.2;
-    this.id = null;
-    return this;
-  };
-  HeartCurve.prototype._drawAxis = function () {
-    const {
-      ctx,
-      w,
-      h
-    } = this;
-    ctx.lineWidth = 1;
-    ctx.strokeStyle = "#999";
-    ctx.beginPath();
-    ctx.moveTo(-w * 2 / 3, 0);
-    ctx.lineTo(w / 3, 0);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(0, -h * 0.48);
-    ctx.lineTo(0, h * 0.48);
-    ctx.stroke();
-  };
-  HeartCurve.prototype._drawCure = function () {
-    const {
-      ctx,
-      a
-    } = this;
-    ctx.beginPath();
-    let x, y, deg = 0;
-    ctx.moveTo(0, 0);
-    ctx.strokeStyle = "#ff0000";
-    while (deg <= 360) {
-      const theta = deg / 180 * Math.PI;
-      r = 2 * a * (1 - Math.cos(theta));
-      x = r * Math.cos(theta);
-      y = r * Math.sin(theta);
-      ctx.lineTo(x, y);
-      deg++;
-    }
-    ctx.stroke();
-  };
-  HeartCurve.prototype.spin = function () {
-    let {
-      a,
-      w,
-      h,
-      deg,
-      ctx
-    } = this;
-    if (deg >= 360) deg = 0;
-
-    ctx.clearRect(-w / 3 * 2, -h / 2, w, h);
-    const theta = deg / 180 * Math.PI;
-    this._drawAxis();
-    ctx.lineWidth = 2;
-    this._drawCure();
-    ctx.strokeStyle = "#000";
-    ctx.beginPath();
-    ctx.arc(-a, 0, a, 0, 2 * Math.PI);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.arc(2 * a * Math.cos(theta) - a, 2 * a * Math.sin(theta), a, 0, 2 * Math.PI);
-    ctx.stroke();
-    ctx.beginPath();
-    let r = 2 * a * (1 - Math.cos(theta));
-    let x = r * Math.cos(theta);
-    let y = r * Math.sin(theta);
-    ctx.arc(x, y, 3, 0, 2 * Math.PI);
-    ctx.fill();
-    if (this.isPause) return;
-
-    this.deg = deg + this.speed;
-    this.id = window.requestAnimationFrame(this.spin.bind(this));
-  };
-  HeartCurve.prototype.pause = function () {
-    this.isPause = true;
-    if (window.cancelAnimationFrame) {
-      window.cancelAnimationFrame(this.id);
-    }
-  };
-  HeartCurve.prototype.resume = function () {
-    this.isPause = false;
-    this.spin();
-  };
-
-  (function () {
-    const heartCurve = new HeartCurve(400, 400);
-    heartCurve.spin();
-    mobileAdjust(window.matchMedia("(hover:none"));
-    window.matchMedia("(hover:none)").addListener(mobileAdjust);
-
-    function mobileAdjust(media) {
-      const wallEl = document.querySelector('#wall-main')
-      if (!media.matches) {
-        heartCurve.pause();
-        wallEl.addEventListener('mouseenter', () => {
-          console.log('resume');
-          heartCurve.resume();
-        });
-        wallEl.addEventListener('mouseleave', () => {
-          console.log('pause');
-          heartCurve.pause();
-        });
-      }
-    }
-  })();
-</script>
-  
-  
-  <script type="text/javascript">
-    const timelineData = {"types":["article","app","event"],"posts":[]}
-    const {types, posts} = timelineData
-    listEl = document.querySelector("#timeline-list");
-
-    elRefs = getElRefs(types)
-    bindListener(types, elRefs)
-
-    setTimeout(init.bind(this, types, elRefs))
-
-    function getElRefs(types) {
-      return types.map(type => document.querySelector(`#radio-${type}`))
-    }
-
-    function bindListener(names, els) {
-      names.map((name, i) => els[i].addEventListener('change', e => updateList(name, e.target.checked)))
-    }
-
-    function updateList(type, value) {
-      listDom
-        .filter(line => line.type === type)
-        .forEach(line => {
-          line.el.className = line
-            .el
-            .className
-            .replace(
-              /(--hidden)?$/, value
-              ? ""
-              : "--hidden");
-        });
-    }
-
-    const listDom = posts.map(t => getLine(t));
-    listEl.append(...listDom.map(i => i.el));
-
-    function getLine(data) {
-      const item = document.createElement("DIV");
-      item.className = `timeline-item-${data.type} timeline-item--hidden`;
-      item.innerHTML = `
-                          <div class="line-date">
-                          <div class="line-date-tag">${data.date}</div></div>
-                          <div class="line-anchor"></div>
-                          <div class="line-title">
-                              <img class="text-icon" src="${data.icon}" /><a class="timeline-post" href="${data.path}">${data.title}</a>
-                          </div>
-                          `;
-      return {el: item, type: data.type};
-    };
-
-    function init(names, els) {
-      names.map((name, i) => updateList(name, els[i].checked))
-    }
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"bamboo-w.github.io","root":"/project/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
+  <meta name="description" content="博客会分享一些数学、物理、CS相关的知识，主要是记录自己的学习历程，分享学习心得">
+<meta property="og:type" content="website">
+<meta property="og:title" content="StudyingBlog">
+<meta property="og:url" content="https://bamboo-w.github.io/project/index.html">
+<meta property="og:site_name" content="StudyingBlog">
+<meta property="og:description" content="博客会分享一些数学、物理、CS相关的知识，主要是记录自己的学习历程，分享学习心得">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="BambooWa">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://bamboo-w.github.io/project/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>StudyingBlog</title>
   
 
-  </body>
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/project/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">StudyingBlog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">这里是Bamboo-W的学习博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/project/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/project/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://bamboo-w.github.io/project/2025/05/10/%E6%88%91%E5%BB%BA%E5%A5%BD%E6%88%91%E7%9A%84github%E5%8D%9A%E5%AE%A2%E5%95%A6%EF%BC%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="BambooWa">
+      <meta itemprop="description" content="博客会分享一些数学、物理、CS相关的知识，主要是记录自己的学习历程，分享学习心得">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StudyingBlog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/project/2025/05/10/%E6%88%91%E5%BB%BA%E5%A5%BD%E6%88%91%E7%9A%84github%E5%8D%9A%E5%AE%A2%E5%95%A6%EF%BC%81/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-05-10 02:34:53 / 修改时间：16:47:37" itemprop="dateCreated datePublished" datetime="2025-05-10T02:34:53+08:00">2025-05-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/project/categories/AllArticle/" itemprop="url" rel="index"><span itemprop="name">AllArticle</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="title-我建好我的github博客啦！date-2025-05-10-02-34-53tags"><a href="#title-我建好我的github博客啦！date-2025-05-10-02-34-53tags" class="headerlink" title="title: 我建好我的github博客啦！date: 2025-05-10 02:34:53tags:"></a>title: 我建好我的github博客啦！<br>date: 2025-05-10 02:34:53<br>tags:</h2><p>哇哇哇！！终于建好啦！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://bamboo-w.github.io/project/2025/05/10/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/project/images/avatar.gif">
+      <meta itemprop="name" content="BambooWa">
+      <meta itemprop="description" content="博客会分享一些数学、物理、CS相关的知识，主要是记录自己的学习历程，分享学习心得">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StudyingBlog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/project/2025/05/10/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-05-10 01:29:33 / 修改时间：01:16:09" itemprop="dateCreated datePublished" datetime="2025-05-10T01:29:33+08:00">2025-05-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">BambooWa</p>
+  <div class="site-description" itemprop="description">博客会分享一些数学、物理、CS相关的知识，主要是记录自己的学习历程，分享学习心得</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/project/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">BambooWa</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/project/lib/anime.min.js"></script>
+  <script src="/project/lib/velocity/velocity.min.js"></script>
+  <script src="/project/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/project/js/utils.js"></script>
+
+<script src="/project/js/motion.js"></script>
+
+
+<script src="/project/js/schemes/muse.js"></script>
+
+
+<script src="/project/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
 </html>
